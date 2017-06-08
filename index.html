@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> simple calculator</title>
+    <script>
+
+var calculate='Y';
+while(calculate=='Y'){ 
+alert("開始計算囉!");
+var n1=prompt("請輸入第一個數字","");
+n1=Number(n1);
+
+while(isNaN(n1)||n1==""){/*n1不是數字或忘記輸入，進入迴圈，直到輸入正確*/
+    n1=prompt("不正確的資料，請輸入「數字」","");
+    n1=Number(n1);
+}
+
+var op=prompt("Operation: +, -, *, /","");
+while(op!=="+"&&op!=="-"&&op!=="*"&&op!=="/"){ 
+    op=prompt("不正確的資料，請輸入: +, -, *, /","");
+
+}
+
+var n2=prompt("請輸入第二個數字","");
+n2=Number(n2);
+
+while(isNaN(n2)||n2==""){
+    n2=prompt("不正確的資料，請輸入「數字」","");
+    n2=Number(n2)
+}
+
+var result;
+if(op=="+"){
+            result=n1+n2;
+        }else if(op=="-"){
+            result=n1-n2;
+        }else if(op=="*"){
+            result=n1*n2;
+        }else if(op=="/"){
+            result=n1/n2;
+        }
+
+        alert("計算完畢!結果是:"+" "+result);
+
+        calculate=prompt("還要再算一次嗎?Y/N","Y");
+        }  
+        alert("Thank you!")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
